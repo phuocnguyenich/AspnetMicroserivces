@@ -15,7 +15,7 @@ namespace Catalog.API.Repositories
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        public async Task<IEnumerable<Product>> GteProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
             return await _context.Products.Find(p => true).ToListAsync();
         }
