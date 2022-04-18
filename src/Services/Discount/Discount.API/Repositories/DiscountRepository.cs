@@ -16,7 +16,7 @@ namespace Discount.API.Repositories
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        public async Task<Coupon> GetCoupon(string productName)
+        public async Task<Coupon> GetDiscount(string productName)
         {
             using var connection =
                 new NpgsqlConnection(_configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
